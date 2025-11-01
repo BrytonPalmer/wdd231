@@ -77,3 +77,36 @@ const courses = [
         completed: true
     }
 ]
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".completed-buttons");
+  const filterButtons = document.querySelectorAll(".filter-button");
+
+  function renderCourses(subject) {
+    container.innerHTML = ""; // Clear previous buttons
+
+    const filtered = courses.filter(course => {
+      return course.completed && (subject === "all" || course.subject === subject);
+    });
+
+    filtered.forEach(course => {
+      const button = document.createElement("button");
+      button.className = "completed-course-button";
+      button.textContent = `${course.subject} ${course.number}: ${course.title}`;
+      container.appendChild(button);
+    });
+  }
+
+  // Initial render (all completed courses)
+  renderCourses("all");
+
+  // Add event listeners to filter buttons
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const subject = button.getAttribute("data-subject");
+      renderCourses(subject);
+    });
+  });
+});
