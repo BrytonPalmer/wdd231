@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bryton Palmer">
+    <meta name="description" content="Home page for Bryton Palmer's About me section">
+    <title>Home page | Bryton Palmer's About me section </title>
+</head>
+<body>
+    <header>
+        <src="images/site-logo.png" alt="Site-Logo"></src>
+        <h1>Site Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber.html">Chamber Project</a></li>
+                <li><a href="final.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Hi, I’m Bryton Palmer from South Jordan, Utah. I work in the Printing Division 
+                for the Church of Jesus Christ of Latter-day Saints, and I’m excited to be welcoming 
+                a new baby into our family soon. Outside of work, I’m passionate about learning 
+                computer programming and software development. I enjoy exploring how technology 
+                can solve real-world problems and create meaningful experiences. Whether 
+                I’m building a project from scratch or diving into new coding concepts, I’m driven 
+                by curiosity, creativity, and a desire to grow both personally and professionally.
+            </p>
+        </section>
+        <section>
+            <h2>Student Photo</h2>
+            <img src="images/profile-pic.png" alt="Bryton Palmer's Photo">
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <ul>
+                <li><a href="all.html" class="button">All</a></li>
+                <li><a href="cse.html" class="button">CSE</a></li>
+                <li><a href="wdd.html" class="button">WDD</a></li>
+            </ul>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="https://github.com/BrytonPalmer/wdd231" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github-icon.png" alt="GitHub Icon"></a></li>
+                <li><a href="https://www.linkedin.com/in/bryton-palmer-2b4b6215b/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn Icon"></a></li>
+                <li><a href="https://www.instagram.com/palmerbryton/" target="_blank" rel="noopener" aria-label="instagram"><img src="images/instagram-icon.png" alt="Instagram Icon"></a></li>
+            </ul>
+            <span id="currentYear"></span>
+            <p>&copy; Bryton Palmer | United States</p>
+            <span id="lastModified"></span>
+
+        </footer>
+
+    </main>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+
+</body>
+</html>
