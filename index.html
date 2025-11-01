@@ -6,22 +6,33 @@
     <meta name="author" content="Bryton Palmer">
     <meta name="description" content="Home page for Bryton Palmer's About me section">
     <title>Home page | Bryton Palmer's About me section </title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="scripts" href="scripts/course.js">
+    <link rel="scripts" href="scripts/navigation.js">
+    <link rel="scripts" href="scripts/date.js">
 </head>
 <body>
     <header>
-        <src="images/site-logo.png" alt="Site-Logo"></src>
-        <h1>Site Name</h1>
+        <div class="header-top">
+            <img src="images/site-logo-2.png" alt="Site Logo" class="site-logo" />
+            <span>Bryton Palmer</span>
+            <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+        </div>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chamber.html">Chamber Project</a></li>
-                <li><a href="final.html">Final Project</a></li>
+            <ul class="navigation">
+            <li class="nav-button"><a href="index.html">Home</a></li>
+            <li class="nav-button"><a href="chamber.html">Chamber Project</a></li>
+            <li class="nav-button"><a href="final.html">Final Project</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <h1>Home</h1>
-        <section>
+        <div class="about-wrapper">
+        <section id="about-me" class="about-sections">
             <h2>About Me</h2>
             <p>
                 Hi, I’m Bryton Palmer from South Jordan, Utah. I work in the Printing Division 
@@ -33,35 +44,36 @@
                 by curiosity, creativity, and a desire to grow both personally and professionally.
             </p>
         </section>
-        <section>
+        <section id="student-photo" class="about-sections">
             <h2>Student Photo</h2>
-            <img src="images/profile-pic.png" alt="Bryton Palmer's Photo">
+            <img src="images/profile.webp" alt="Bryton Palmer's Photo" loading="lazy">
         </section>
-        <section>
+        </div>
+        <section id="certificate-course">
             <h2>Web Certificate Courses</h2>
-            <ul>
+            <ul class="course-buttons">
                 <li><a href="all.html" class="button">All</a></li>
                 <li><a href="cse.html" class="button">CSE</a></li>
                 <li><a href="wdd.html" class="button">WDD</a></li>
             </ul>
         </section>
         <footer>
-            <ul>
-                <li><a href="https://github.com/BrytonPalmer/wdd231" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github-icon.png" alt="GitHub Icon"></a></li>
-                <li><a href="https://www.linkedin.com/in/bryton-palmer-2b4b6215b/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn Icon"></a></li>
-                <li><a href="https://www.instagram.com/palmerbryton/" target="_blank" rel="noopener" aria-label="instagram"><img src="images/instagram-icon.png" alt="Instagram Icon"></a></li>
+            <ul class="social-media-links">
+                <li><a href="https://github.com/BrytonPalmer/wdd231" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github-mark.svg" width="44" height="44" alt="GitHub Icon"></a></li>
+                <li><a href="https://www.linkedin.com/in/bryton-palmer-2b4b6215b/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin.svg" width="44" height="44" alt="LinkedIn Icon"></a></li>
+                <li><a href="https://www.instagram.com/palmerbryton/" target="_blank" rel="noopener" aria-label="instagram"><img src="images/instagram-icon.webp" width="44" height="44" alt="Instagram Icon"></a></li>
             </ul>
-            <span id="currentYear"></span>
-            <p>&copy; Bryton Palmer | United States</p>
-            <span id="lastModified"></span>
-
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span> Bryton Palmer | United States</p>
+                <span id="lastModified"></span>
+            </div>
         </footer>
 
     </main>
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
+        <script src="scripts/course.js" defer></script>
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/date.js" defer></script>
+
 
 </body>
 </html>
