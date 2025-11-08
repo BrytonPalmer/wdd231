@@ -1,0 +1,104 @@
+/* === MEDIA QUERY FOR DESKTOP SCREENS === */
+@media screen and (min-width: 768px) {
+
+  /* === HEADER === */
+  .header-top {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .site-logo {
+    width: 120px;
+  }
+
+  span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* === NAVIGATION === */
+  nav {
+    background-color: #333;
+    margin-top: 1rem;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  .nav-button a {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s;
+  }
+
+  .nav-button a:hover {
+    background-color: #555;
+  }
+
+  /* === MAIN LAYOUT === */
+  .about-wrapper {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #about-me {
+    flex: 2 1 0%;
+  }
+
+  #student-photo {
+    flex: 1 1 0%;
+  }
+
+  .about-sections {
+    height: 300px;
+  }
+
+  /* === COURSE BUTTONS === */
+  .course-buttons li {
+    flex: 1 1 30%;
+    max-width: 33%;
+  }
+
+  .course-buttons .button {
+    width: 90%;
+  }
+
+  /* === FOOTER === */
+  .social-media-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+
+  #hamburger {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+}

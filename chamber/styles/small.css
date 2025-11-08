@@ -1,0 +1,163 @@
+header {
+    background-color: #68668f;
+    padding: .5rem;
+    color: white
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-button a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-button a:hover {
+    background-color: #555;
+}
+
+/* main h1 */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: #f5f7fa; /* Soft background */
+}
+
+.company-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.company-card img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.company-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+
+.company-card p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.company-card a {
+  color: #0077b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.company-card a:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
+
+/* footer */
+/* footer {
+  background-color: #68668f;
+  color: #f4f4f4;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+} */
+
+/* Footer Layout */
+footer {
+  background-color: #68668f;
+  color: #f4f4f4;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffd700; /* Soft gold accent */
+}
+
+.footer-column p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-links img {
+  width: 44px;
+  height: 44px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
