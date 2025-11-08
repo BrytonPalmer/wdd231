@@ -179,6 +179,14 @@ footer {
   margin-right: 8px;
 }
 
+.footer-column {
+  font-size: 0.9rem; /* or whatever size you prefer */
+}
+
+.footer-column span {
+  font-size: inherit;
+}
+
 
 /* Responsive stacking */
 @media (max-width: 768px) {
