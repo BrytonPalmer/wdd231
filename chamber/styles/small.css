@@ -186,6 +186,7 @@ footer {
 .footer-column {
   flex: 1;
   min-width: 200px;
+  font-size: 1rem;
 }
 
 .footer-column h3 {
@@ -233,10 +234,6 @@ footer {
   width: 44px;
   height: 44px;
   margin-right: 8px;
-}
-
-.footer-column {
-  font-size: 0.9rem; /* or whatever size you prefer */
 }
 
 .footer-column span {
