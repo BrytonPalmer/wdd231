@@ -1,6 +1,6 @@
 async function loadCompanies() {
   try {
-    const response = await fetch('data/companies.json');
+    const response = await fetch('data/members.json');
     if (!response.ok) throw new Error('Network response was not ok');
     
     const companies = await response.json();

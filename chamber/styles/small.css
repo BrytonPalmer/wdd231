@@ -27,6 +27,14 @@ header {
 }
 
 /* main h1 */
+
+main h1 {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  color: #333;
+}
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
