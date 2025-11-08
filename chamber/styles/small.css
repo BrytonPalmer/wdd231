@@ -125,12 +125,12 @@ footer {
 .footer-column h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #ffd700; /* Soft gold accent */
+  color: white;
 }
 
 .footer-column p {
   margin: 0.5rem 0;
-  color: #ccc;
+  color: white;
 }
 
 .footer-column ul {
@@ -145,12 +145,12 @@ footer {
 
 .footer-column a {
   text-decoration: none;
-  color: #ccc;
+  color: white;
   transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
-  color: #fff;
+  color: #023e8a;
   text-decoration: underline;
 }
 
