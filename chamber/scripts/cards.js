@@ -19,7 +19,6 @@ function displayCompanyCards(companies) {
     card.classList.add('company-card');
 
     card.innerHTML = `
-      <img src="images/${company.image}" alt="${company.name} logo">
       <h2>${company.name}</h2>
       <p><strong>Address:</strong> ${company.address}</p>
       <p><strong>Phone:</strong> ${company.phone}</p>
