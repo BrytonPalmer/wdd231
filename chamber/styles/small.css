@@ -172,10 +172,18 @@ footer {
   text-decoration: underline;
 }
 
+.social-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
 .social-links img {
   width: 44px;
   height: 44px;
-  vertical-align: middle;
   margin-right: 8px;
 }
 
