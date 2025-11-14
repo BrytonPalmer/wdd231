@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="South Jordan Utah, Chamber of Commerce directory Page">
+    <meta name="description" content="South Jordan Utah, Chamber of Commerce Home Page">
     <meta name="author" content="Bryton Palmer">
-    <title>South Jordan Utah, Chammber of Commerce Directory Page</title>
+    <title>South Jordan Utah, Chammber of Commerce Home Page</title>
     <meta property="og:title" content="South Jordan Chamber of Commerce">
-    <meta property="og:description" content="South Jordan Utah, Chamber of Commerce directory page">
-    <meta property="og:url" content="https://brytonpalmer.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="South Jordan Utah, Chamber of Commerce Home page">
+    <meta property="og:url" content="https://brytonpalmer.github.io/wdd231/chamber/index.html">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://brytonpalmer.github.io/wdd231/chamber/og-selector-banner.png">
     <meta property="og:type" content="website">
@@ -28,7 +28,13 @@
         <div class="header-top">
             <img src="images/southjordan-chamber-logo.png" alt="Site Logo" class="site-logo" fetchpriority="high"/>
             <span>South Jordan Chamber of Commerce</span>
-            <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+            <nav>
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
         </div>
         <nav>
             <ul class="navigation">
@@ -41,13 +47,7 @@
         </nav> 
     </header>
     <main>
-        <h1>Chamber Directory</h1>
-        <div class="view-toggle">
-            <button id="gridView">Grid View</button>
-            <button id="listView">List View</button>
-        </div>
 
-        <section id="company-cards" class="cards-container"></section>
     </main>
     <footer>
     <div class="footer-container">
@@ -89,4 +89,3 @@
     <script src="scripts/date.js" defer></script>
 </body>
 </html>
-
