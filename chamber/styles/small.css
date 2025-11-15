@@ -72,6 +72,27 @@ ul.navigation {
   padding: 0.5rem 1rem;
 }
 
+#mobile-nav.hidden {
+  display: none;
+}
+
+#mobile-nav.show {
+  display: block;
+}
+
+
+#hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  transition: transform 0.3s ease;
+}
+
+
 /* Hero Section */
 .hero {
   position: relative;

@@ -28,10 +28,14 @@
         <div class="header-top">
             <img src="images/southjordan-chamber-logo.png" alt="Site Logo" class="site-logo" fetchpriority="high"/>
             <span>South Jordan Chamber of Commerce</span>
-            <button id="hamburger">☰</button>
+
+            <button id="hamburger" aria-label="Toggle navigation">
+                <span id="hamburger-icon">☰</span>
+            </button>
+
 
         </div>
-        <nav>
+        <nav id="mobile-nav" class="hidden">
             <ul class="navigation">
                 <li class="nav-button"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-button"><a href="join.html" class="nav-link">Join</a></li>
