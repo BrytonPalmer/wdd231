@@ -200,6 +200,52 @@ main h1 {
   color: #023e8a;
   text-decoration: underline;
 }
+/* home-spotlight cards */
+#spotlight {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#spotlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+#spotlight img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+#spotlight h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+
+#spotlight p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+#spotlight a {
+  color: #0077b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#spotlight a:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
 
 /* List View Styles */
 .company-list {

@@ -6,9 +6,10 @@ async function loadSpotlightMembers() {
         const data = await response.json();
 
         // filter for gold and silver members
-        const qualified = data.members.filter(member =>
-            member.membership === 'Gold' || member.membership === 'Silver'
+        const qualified = data.filter(member =>
+        member.membershipLevel >= 2 // 2 = Silver, 3 = Gold
         );
+
 
         //shuffle and select 3 random members
         const spotlight = qualified
