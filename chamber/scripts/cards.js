@@ -41,7 +41,7 @@ function displayCompanyCards() {
   } else {
     companies.forEach(company => {
       const card = document.createElement('div');
-      card.classList.add('company-card');
+      card.classList.add('card');
       card.innerHTML = `
         <h2>${company.name}</h2>
         <p><strong>Address:</strong> ${company.address}</p>
