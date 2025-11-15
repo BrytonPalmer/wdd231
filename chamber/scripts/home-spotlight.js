@@ -1,5 +1,5 @@
 async function loadSpotlightMembers() {
-    const spotlightContainer = document.querySelector('#spotlight');
+    const spotlightContainer = document.querySelector('#spotlight .cards-container');
 
     try {
         const response = await fetch('data/members.json');

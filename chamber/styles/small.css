@@ -155,7 +155,7 @@ main h1 {
 }
 
 /* Company Card Styles */
-.company-card {
+/* .company-card {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -201,7 +201,7 @@ main h1 {
   text-decoration: underline;
 }
 /* home-spotlight cards */
-#spotlight {
+/* #spotlight {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -245,7 +245,68 @@ main h1 {
 #spotlight a:hover {
   color: #023e8a;
   text-decoration: underline;
+} */ 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 1rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
+
+.card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card h2,
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card a {
+  color: #0077b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
+
 
 /* List View Styles */
 .company-list {

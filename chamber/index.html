@@ -53,15 +53,39 @@
                 <button onclick="location.href='join.html'" class="hero-button">Join Now</button>
             </div>
         </div>
-        <section class="intro">
+
+        <!-- <section class="intro">
             <p>The South Jordan Chamber of Commerce is dedicated to supporting local businesses and fostering a thriving community. Join us to connect, grow, and make a difference in South Jordan, Utah.</p>
             <img src="images/" alt="South Jordan Community" class="intro-image"/>
-        </section>
-        <section id="current-events" class="cards-container">
-            <h2>Upcoming Events in South Jordan</h2>
+        </section> -->
+
+        <section id="weather">
+            <h2>Current Weather</h2>
+                <div class="cards-container">
+                    <section class="card">
+                    <p id="current-temp"></p>
+                    <figure>
+                        <img id="weather-icon" alt="Weather icon">
+                        <figcaption id="figcaption"></figcaption>
+                    </figure>
+                    </section>
+                </div>
         </section>
 
-        <section id="spotlight" class="cards-container"></section>
+        <section id="current-events">
+            <h2>Upcoming Events in South Jordan</h2>
+            <div class="cards-container">
+                <!-- JS will inject multiple <section class="card">...</section> here -->
+            </div>
+        </section>
+
+        <section id="spotlight">
+            <h2>Member Spotlights</h2>
+            <div class="cards-container">
+                <!-- JS will inject multiple <section class="card">...</section> here -->
+            </div>
+        </section>
+
         
     </main>
     <footer>
@@ -105,7 +129,5 @@
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/home-spotlight.js" defer></script>
     <script src="scripts/events.js" defer></script>
-
-
 </body>
 </html>
