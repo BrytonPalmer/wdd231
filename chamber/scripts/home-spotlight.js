@@ -1,3 +1,4 @@
+
 async function loadSpotlightMembers() {
     const spotlightContainer = document.querySelector('#spotlight .cards-container');
 
@@ -22,7 +23,7 @@ async function loadSpotlightMembers() {
             card.classList.add('spotlight-card');
             card.innerHTML = `
                 <h3>${member.name}</h3>
-                <p>${member.membership} Member </p>
+                <p>${getMembershipLevel(member.membershipLevel)} Member</p>
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <a href="${member.website}" target="_blank">Visit Website</a>
@@ -34,4 +35,14 @@ async function loadSpotlightMembers() {
         spotlightContainer.innerHTML = `<p>Unable to load spotlight members at this time.</p>`;    
     }
 }
+
+function getMembershipLevel(level) {
+  switch (level) {
+    case 1: return 'Member';
+    case 2: return 'Silver';
+    case 3: return 'Gold';
+    default: return 'Unknown';
+  }
+}
+
 loadSpotlightMembers();

@@ -94,6 +94,7 @@ ul.navigation {
   padding: 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  color: white
 }
 
 .hero-button {
@@ -141,7 +142,11 @@ ul.navigation {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 2rem 1rem;
-  background-color: #f5f7fa;
+  background-color: #e0e0e0;
+}
+section.spotlight-card {
+  background-color: white;
+  border-radius: 3px;
 }
 
 .grid-view {
@@ -153,9 +158,12 @@ ul.navigation {
 }
 
 /* Card Styles */
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
-  flex: 1 1 300px;
-  max-width: 350px;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
