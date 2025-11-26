@@ -46,6 +46,146 @@
         </nav> 
     </header>
     <main>
+         <section class="join-form">
+            <h1>Join the South Jordan Chamber of Commerce</h1>
+            <form method="get" action="thankyou.html">
+            
+            <!-- First Name -->
+            <label>
+                First Name:
+                <input type="text" name="firstName" title="Applicant First Name" autocomplete="given-name" required>
+            </label>
+
+            <!-- Last Name -->
+            <label>
+                Last Name:
+                <input type="text" name="lastName" title="Applicant Last Name" autocomplete="family-name" required>
+            </label>
+
+            <!-- Organizational Title -->
+            <label>
+                Organizational Title:
+                <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" 
+                    pattern="[A-Za-z\\-\\s]{7,}" placeholder="e.g. Marketing Manager">
+            </label>
+
+            <!-- Email -->
+            <label>
+                Email:
+                <input type="email" name="email" title="Email Address" autocomplete="email" required 
+                    placeholder="example@domain.com">
+            </label>
+
+            <!-- Mobile Phone -->
+            <label>
+                Mobile Phone:
+                <input type="tel" name="mobile" title="Mobile Phone Number" autocomplete="tel" required>
+            </label>
+
+            <!-- Organization Name -->
+            <label>
+                Organization Name:
+                <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+            </label>
+
+            <!-- Membership Level -->
+            <label>
+                Membership Level:
+                <select name="membership" title="Membership Level" required>
+                <option value="">Select a level...</option>
+                <option value="np">NP Membership (Non-Profit)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <!-- Organization Description -->
+            <label>
+                Organization Description:
+                <textarea name="description" title="Organization Description"></textarea>
+            </label>
+
+            <!-- Timestamp -->
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Application">
+            </form>
+        </section>
+
+        <!-- Membership Cards -->
+        <section class="membership-cards">
+            <div class="card np">
+            <h2>NP Membership</h2>
+            <p>Perfect for non-profits, no fee required.</p>
+            <a href="#npModal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card bronze">
+            <h2>Bronze Membership</h2>
+            <p>Affordable entry-level membership.</p>
+            <a href="#bronzeModal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card silver">
+            <h2>Silver Membership</h2>
+            <p>Enhanced benefits and visibility.</p>
+            <a href="#silverModal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card gold">
+            <h2>Gold Membership</h2>
+            <p>Premium benefits and spotlight opportunities.</p>
+            <a href="#goldModal" class="modal-link">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No membership fee</li>
+                <li>Access to community events</li>
+                <li>Networking opportunities</li>
+            </ul>
+            </div>
+        </div>
+
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Discounted event tickets</li>
+                <li>Basic advertising opportunities</li>
+                <li>Training sessions</li>
+            </ul>
+            </div>
+        </div>
+
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>Spotlight positions on homepage</li>
+                <li>Greater event discounts</li>
+                <li>Exclusive networking events</li>
+            </ul>
+            </div>
+        </div>
+
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>Premium advertising</li>
+                <li>Highest event discounts</li>
+                <li>VIP access to chamber events</li>
+            </ul>
+            </div>
+        </div>
 
     </main>
     <footer>

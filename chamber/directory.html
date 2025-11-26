@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="South Jordan Utah, Chamber of Commerce directory Page">
-    <meta name="author" content="Bryton Palmer">
-    <title>South Jordan Utah, Chammber of Commerce Directory Page</title>
-    <meta property="og:title" content="South Jordan Chamber of Commerce">
-    <meta property="og:description" content="South Jordan Utah, Chamber of Commerce directory page">
-    <meta property="og:url" content="https://brytonpalmer.github.io/wdd231/chamber/directory.html">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://brytonpalmer.github.io/wdd231/chamber/og-selector-banner.png">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="South Jordan Chamber of Commerce">
-    <link rel="icon" href="images/southjordan-chamber-logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/southjordan-chamber-logo.png">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="South Jordan Utah, Chamber of Commerce Directory Page">
+  <meta name="author" content="Bryton Palmer">
+  <title>South Jordan Utah, Chamber of Commerce Directory Page</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="South Jordan Chamber of Commerce">
+  <meta property="og:description" content="South Jordan Utah, Chamber of Commerce directory page">
+  <meta property="og:url" content="https://brytonpalmer.github.io/wdd231/chamber/directory.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://brytonpalmer.github.io/wdd231/chamber/og-selector-banner.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="South Jordan Chamber of Commerce">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/southjordan-chamber-logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/southjordan-chamber-logo.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <img src="images/southjordan-chamber-logo.png" alt="Site Logo" class="site-logo" fetchpriority="high"/>
-            <span>South Jordan Chamber of Commerce</span>
-            <button id="hamburger" aria-label="Toggle navigation">
-                <span id="hamburger-icon">☰</span>
-            </button>
-        </div>
-        <nav>
-            <ul class="navigation">
-                <li class="nav-button"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-button"><a href="join.html" class="nav-link">Join</a></li>
-                <li class="nav-button"><a href="directory.html" class="nav-link">Directory</a></li>
-                <li class="nav-button"><a href="discover.html" class="nav-link">Discover</a></li>
-                <!-- <li class="nav-button"><a href="../index.html" class="nav-link">Course Home</a></li> -->
-            </ul>
-        </nav> 
-    </header>
-    <main>
-        <h1>Chamber Directory</h1>
-        <div class="view-toggle">
-            <button id="gridView">Grid View</button>
-            <button id="listView">List View</button>
-        </div>
+  <header>
+    <div class="header-top">
+      <img src="images/southjordan-chamber-logo.png" alt="Site Logo" class="site-logo" fetchpriority="high"/>
+      <span>South Jordan Chamber of Commerce</span>
+      <button id="hamburger" aria-label="Toggle navigation">
+        <span id="hamburger-icon">☰</span>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="hidden">
+      <ul class="navigation">
+        <li class="nav-button"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-button"><a href="join.html" class="nav-link">Join</a></li>
+        <li class="nav-button"><a href="directory.html" class="nav-link active">Directory</a></li>
+        <li class="nav-button"><a href="discover.html" class="nav-link">Discover</a></li>
+        <!-- <li class="nav-button"><a href="../index.html" class="nav-link">Course Home</a></li> -->
+      </ul>
+    </nav> 
+  </header>
 
-        <section id="company-cards" class="card"></section>
-        <!-- cards-container -->
-    </main>
-    <footer>
+  <main>
+    <h1>Chamber Directory</h1>
+
+    <div class="view-toggle">
+      <button id="gridView">Grid View</button>
+      <button id="listView">List View</button>
+    </div>
+
+    <!-- Cards container for directory entries -->
+    <section id="company-cards" class="cards-container"></section>
+  </main>
+
+  <footer>
     <div class="footer-container">
-        <div class="footer-column">
+      <div class="footer-column">
         <h3>South Jordan Chamber of Commerce</h3>
         <p>123 Chamber Way<br>South Jordan, UT 84095</p>
         <p>Email: info@sjchamber.org</p>
         <p>Phone: (801) 123-4567</p>
-        </div>
-        <div class="footer-column">
-            <ul class="social-links">
-            <li>
-                <a href="https://github.com/brytonpalmer" target="_blank" rel="noopener">
-                <img src="images/github-mark.svg" alt="GitHub icon">
-                </a>
-            </li>
-            <li>
-                <a href="https://instagram.com/brytonpalmer" target="_blank" rel="noopener" >
-                <img src="images/instagram-icon.webp" alt="Instagram icon" rel="noopener">
-                </a>
-            </li>
-            <li>
-                <a href="https://linkedin.com/in/brytonpalmer" target="_blank" rel="noopener">
-                <img src="images/linkedin.svg" alt="LinkedIn icon" rel="noopener">
-                </a>
-            </li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <p>WDD231 Chamber Project</p>
-            <p>Developed by Bryton Palmer</p>
-            <p>&copy; <span id="currentYear"></span> South Jordan Chamber of Commerce</p>
-            <p>Last Updated: <span id="lastModified"></span></p>
-        </div>
+      </div>
+      <div class="footer-column">
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com/brytonpalmer" target="_blank" rel="noopener">
+              <img src="images/github-mark.svg" alt="GitHub icon">
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/brytonpalmer" target="_blank" rel="noopener">
+              <img src="images/instagram-icon.webp" alt="Instagram icon">
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/brytonpalmer" target="_blank" rel="noopener">
+              <img src="images/linkedin.svg" alt="LinkedIn icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <p>WDD231 Chamber Project</p>
+        <p>Developed by Bryton Palmer</p>
+        <p>&copy; <span id="currentYear"></span> South Jordan Chamber of Commerce</p>
+        <p>Last Updated: <span id="lastModified"></span></p>
+      </div>
     </div>
-    </footer>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/cards.js" defer></script>
-    <script src="scripts/date.js" defer></script>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/cards.js" defer></script>
+  <script src="scripts/date.js" defer></script>
 </body>
 </html>
-
