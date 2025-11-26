@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="South Jordan Utah, Chamber of Commerce Home Page">
     <meta name="author" content="Bryton Palmer">
-    <title>South Jordan Utah, Chammber of Commerce Home Page</title>
+    <title>South Jordan Utah, Chamber of Commerce Home Page</title>
     <meta property="og:title" content="South Jordan Chamber of Commerce">
     <meta property="og:description" content="South Jordan Utah, Chamber of Commerce Home page. Landing page to know more about the chamber and join.">
     <meta property="og:url" content="https://brytonpalmer.github.io/wdd231/chamber/index.html">
@@ -38,7 +38,7 @@
         <nav id="mobile-nav" class="hidden">
             <ul class="navigation">
                 <li class="nav-button"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-button"><a href="join.html" class="nav-link">Join</a></li>
+                <li class="nav-button"><a href="join.html" class="nav-link active">Join</a></li>
                 <li class="nav-button"><a href="directory.html" class="nav-link">Directory</a></li>
                 <li class="nav-button"><a href="discover.html" class="nav-link">Discover</a></li>
                 <!-- <li class="nav-button"><a href="../index.html" class="nav-link">Course Home</a></li> -->
@@ -66,7 +66,7 @@
             <label>
                 Organizational Title:
                 <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" 
-                    pattern="[A-Za-z\\-\\s]{7,}" placeholder="e.g. Marketing Manager">
+                    pattern="[A-Za-z-\s]{7,}" placeholder="e.g. Marketing Manager">
             </label>
 
             <!-- Email -->
@@ -139,7 +139,7 @@
         </section>
 
         <!-- Modals -->
-        <div id="npModal" class="modal">
+        <div id="npModal" class="modal" role="dialog" aria-modal="true">
             <div class="modal-content">
             <span class="close">&times;</span>
             <h2>NP Membership Benefits</h2>
@@ -151,7 +151,7 @@
             </div>
         </div>
 
-        <div id="bronzeModal" class="modal">
+        <div id="bronzeModal" class="modal" role="dialog" aria-modal="true">
             <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Bronze Membership Benefits</h2>
@@ -163,7 +163,7 @@
             </div>
         </div>
 
-        <div id="silverModal" class="modal">
+        <div id="silverModal" class="modal" role="dialog" aria-modal="true">
             <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Silver Membership Benefits</h2>
@@ -175,7 +175,7 @@
             </div>
         </div>
 
-        <div id="goldModal" class="modal">
+        <div id="goldModal" class="modal" role="dialog" aria-modal="true">
             <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Gold Membership Benefits</h2>
