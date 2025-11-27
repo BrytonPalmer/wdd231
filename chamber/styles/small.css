@@ -504,3 +504,11 @@ footer {
       "card5 card6 card7 card8";
   }
 }
+
+@media (min-width: 641px) {
+  .cards figure img:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+}
