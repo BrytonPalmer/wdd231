@@ -9,7 +9,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="South Jordan Chamber of Commerce">
-  <meta property="og:description" content="South Jordan Utah, Chamber of Commerce discover page">
+  <meta property="og:description" content="Discover South Jordan’s Chamber of Commerce — local businesses, events, and community highlights.">
   <meta property="og:url" content="https://brytonpalmer.github.io/wdd231/chamber/discover.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://brytonpalmer.github.io/wdd231/chamber/og-selector-banner.png">
@@ -46,12 +46,12 @@
         <li class="nav-button"><a href="join.html" class="nav-link">Join</a></li>
         <li class="nav-button"><a href="directory.html" class="nav-link">Directory</a></li>
         <li class="nav-button"><a href="discover.html" class="nav-link active">Discover</a></li>
-        <!-- <li class="nav-button"><a href="../index.html" class="nav-link">Course Home</a></li> -->
       </ul>
     </nav> 
   </header>
   <main>
     <div id="page-layout">
+      <h1 id="title">Discover Members in South Jordan</h1>
     <div id="visit-message"></div>
     <section class="cards"></section>
     </div>
@@ -91,49 +91,9 @@
       </div>
     </div>
   </footer>
-
   <!-- Scripts -->
   <script src="scripts/navigation.js" defer></script>
-  <!-- <script src="scripts/cards.js" defer></script> -->
   <script src="scripts/date.js" defer></script>
-  <script type="module">
-    import { places } from "./data/discover.mjs";
-
-    // Render cards from JSON
-    const cardsContainer = document.querySelector(".cards");
-    places.forEach((place, i) => {
-      const card = document.createElement("div");
-      card.classList.add(`card${i+1}`);
-      card.innerHTML = `
-        <h2>${place.name}</h2>
-        <figure><img src="${place.image}" alt="${place.name}" loading="lazy"></figure>
-        <address>${place.address}</address>
-        <p>${place.description}</p>
-        <button>Learn More</button>
-      `;
-      cardsContainer.appendChild(card);
-    });
-
-    // Visitor message logic
-    const messageArea = document.getElementById("visit-message");
-    const lastVisit = localStorage.getItem("lastVisit");
-    const now = Date.now();
-
-    if (!lastVisit) {
-      messageArea.textContent = "Welcome! Let us know if you have any questions.";
-    } else {
-      const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-      if (days < 1) {
-        messageArea.textContent = "Back so soon! Awesome!";
-      } else if (days === 1) {
-        messageArea.textContent = "You last visited 1 day ago.";
-      } else {
-        messageArea.textContent = `You last visited ${days} days ago.`;
-      }
-    }
-
-    localStorage.setItem("lastVisit", now);
-  </script>
-
+  <script type="module" src="scripts/discover.js"></script>
 </body>
 </html>

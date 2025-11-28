@@ -532,7 +532,7 @@ footer {
 
 #visit-message {
   text-align: center;     /* centers text horizontally */
-  font-size: 2em;         /* larger header-like size */
+  font-size: 1.3em;         /* larger header-like size */
   font-weight: bold;      /* makes it stand out */
   margin: 1rem 0;         /* spacing above/below */
   width: 100%; 
@@ -545,4 +545,19 @@ footer {
   display: flex;
   flex-direction: column; /* stack children vertically */
   align-items: center;
+}
+h1 {
+  text-align: center;
+}
+
+#learn-more-button {
+  background-color: #0077b6;
+  color:#f5f5f5;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  margin: auto;
+}
+
+#learn-more-button:hover{
+  background-color:#023e8a;
 }
