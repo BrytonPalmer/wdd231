@@ -42,3 +42,58 @@
             </ul>
         </nav>
     </header>
+      <main>
+    <section class="thankyou-section">
+      <h1>Thank You for Contacting us</h1>
+      <p>We appreciate your interest in Clean Sweep!</p>
+
+      <div class="submitted-info card">
+        <h2>Your Submitted Information</h2>
+        <p><strong>First Name:</strong> <span id="firstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+        <p><strong>Date Submitted:</strong> <span id="timestamp"></span></p>
+      </div>
+
+      <p>We’ll be in touch soon!</p>
+    </section>
+  </main>
+  <footer>
+        <nav class="nav_menu_items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pricing_services.html">Services</a></li>
+                <li><a href="diy_tips.html">Blog</a></li>
+            </ul>
+        </nav>
+        <section>
+        <p>&copy; 2024 Clean Sweep. All rights reserved.</p>
+        <p>Designed by Bryton Palmer</p>
+        </section>
+        <div class="social_media_links">
+            <a href="facebook.com" aria-label="Facebook"><img src="images/facebook-icon.webp" alt="Facebook Icon"></a>
+            <a href="x.com" aria-label="Twitter"><img src="images/twitter_icon.webp" alt="Twitter Icon"></a>
+            <a href="instagram.com" aria-label="Instagram"><img src="images/instagram-icon.webp" alt="Instagram Icon"></a>
+        </div>
+    </footer>
+    <script defer src="scripts/clean_sweep.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+
+  
+
+  <!-- Script to parse query string and display submitted values -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("firstName").textContent = params.get("firstName") || "";
+        document.getElementById("lastName").textContent = params.get("lastName") || "";
+        document.getElementById("email").textContent = params.get("email") || "";
+        document.getElementById("mobile").textContent = params.get("mobile") || "";
+        document.getElementById("timestamp").textContent = params.get("timestamp") || "";
+        });
+    </script>
+</body>
+</html>
