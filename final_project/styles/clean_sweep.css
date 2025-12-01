@@ -489,4 +489,14 @@ button:hover {
   border-radius: 4px;
 }
 /* hamburger button */
+#hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  transition: transform 0.3s ease;
+}
 /* Base styles */

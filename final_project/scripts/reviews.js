@@ -1,5 +1,5 @@
 //reviews.js
-export funtion initReviews() {
+export function initReviews() {
     const reviewSection = document.querySelector('.rewiew-section');
     if (!reviewSection) return;
 
