@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Bryton Palmer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Clean Sweep | Blog - DIY Tips & Success Stories">
+    <meta name="Description" content="Share and read DIY cleaning tips and success stories from our community to keep your home sparkling clean.">
+    <title>Clean Sweep | A Home Cleaning Service</title>
+    <script defer src="scripts/clean_sweep.js"></script>
+    <link rel="stylesheet" href="styles/clean_sweep.css">
+    <link rel="stylesheet" href="styles/clean_sweep_large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo_container">
+        <img src="images/clean_sweep_logo.webp" alt="Clean Sweep company logo">
+        </div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                ☰
+            </button>
+        <nav class="nav_menu_items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pricing_services.html">Services</a></li>
+                <li><a href="diy_tips.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main id="blog_main">
+        <section class="intro">
+            <h2>Community Tips & Success Stories</h2>
+            <p>Share what works for you—cleaning hacks, favorite products, routines, or anything that helps make life easier.</p>
+        </section>
+
+        <section class="blog-form">
+            <h3>Post Your Tip</h3>
+            <form id="blogForm">
+            <label for="author">Your Name:</label>
+            <input type="text" id="author" name="author" placeholder="e.g. Jamie" required />
+
+            <label for="title">Post Title:</label>
+            <input type="text" id="title" name="title" placeholder="e.g. Best Mop for Tile Floors" required />
+
+            <label for="content">Your Tip or Story:</label>
+            <textarea id="content" name="content" rows="6" placeholder="Write your tip here..." required></textarea>
+
+            <button type="submit">Share Post</button>
+            </form>
+        </section>
+
+        <section class="blog-posts">
+            <h3>Recent Posts</h3>
+            <div id="postsContainer">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <nav class="nav_menu_items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pricing_services.html">Services</a></li>
+                <li><a href="diy_tips.html">Blog</a></li>
+            </ul>
+        </nav>
+        <section>
+        <p>&copy; 2024 Clean Sweep. All rights reserved.</p>
+        <p>Designed by Bryton Palmer</p>
+        </section>
+        <div class="social_media_links">
+            <a href="facebook.com" aria-label="Facebook"><img src="images/facebook-icon.webp" alt="Facebook Icon"></a>
+            <a href="x.com" aria-label="Twitter"><img src="images/twitter_icon.webp" alt="Twitter Icon"></a>
+            <a href="instagram.com" aria-label="Instagram"><img src="images/instagram-icon.webp" alt="Instagram Icon"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

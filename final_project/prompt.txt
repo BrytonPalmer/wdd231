@@ -1,0 +1,66 @@
+I am choosing to go with a cleaning service website called Clean Sweep.
+
+I want the website to host a platform where customers can:
+   Gallery - see a gallery of before and after photos or videos
+   About Us - get to know the company and the employees working in their home
+   Pricing and Services - easily navigate through services: homes, rooms, move-outs/ins, garage, etc. with a quote calculator or genaric pricing
+    - tips and tricks sort of blog style page for anyone to share what works for them
+
+I wanted to create this website because I have a family member who wants to 
+start a business like this and I think this would be a good starting point to
+work off of if in the future I do make a website for them. 
+
+<p>Our team of professional cleaners is dedicated to delivering exceptional service with attention to detail.
+ Each member is thoroughly trained, background-checked, and passionate about making your home shine.
+ We believe in building lasting relationships with our clients based on trust and reliability.</p>
+
+
+ Clean Sweep is a Family Business that started with a Mother and her daughters. In the lifetime of Clean Sweep we have kept in in the family
+ for quality assurance everytime we visit one of your homes. We love being able to visit your home and take some weight off your shoulders 
+ by helping out in even the simplest ways. We belive that having a clean home will promote a happier and healthier life for you and your family. 
+ By choosing us you are doing a favor to yourself by letting like Mothers to help out around the house in times of need!
+
+
+
+ from flask import Flask, request, redirect, render_template
+import smtplib
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('contact.html')  # Your form page
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
+
+    # You can log it, store it, or send an email
+    print(f"New message from {name} ({email}): {message}")
+
+    # Optional: send email (requires setup)
+    # send_email(name, email, message)
+
+    return render_template('contact_confirmation.html')  # Your thank-you page
+
+# Optional email function
+def send_email(name, email, message):
+    sender = "you@cleansweep.com"
+    receiver = "you@cleansweep.com"
+    subject = "New Contact Form Submission"
+    body = f"Name: {name}\nEmail: {email}\nMessage:\n{message}"
+
+    try:
+        with smtplib.SMTP('smtp.yourprovider.com', 587) as server:
+            server.starttls()
+            server.login(sender, 'yourpassword')
+            server.sendmail(sender, receiver, f"Subject:{subject}\n\n{body}")
+    except Exception as e:
+        print("Email failed:", e)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+<form action="/submit" method="POST"> <= this is the html update
