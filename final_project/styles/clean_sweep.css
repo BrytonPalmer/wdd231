@@ -562,3 +562,69 @@ button:hover {
 .join-form input[type="submit"]:hover {
   background-color: #023e8a;
 }
+
+/* General form container */
+.join-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading and description */
+.join-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.join-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels and inputs */
+.join-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.join-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.join-form input:focus {
+  border-color: var(--background-color);
+  box-shadow: 0 0 6px rgba(0,120,215,0.3);
+  outline: none;
+}
+
+/* Submit button */
+.join-form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--background-color);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.join-form button:hover {
+  background: #005fa3;
+}
