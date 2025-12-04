@@ -662,6 +662,12 @@ button:hover {
   color: var(--accent-color1);
   font-size: 1.2rem;
 }
+div.contact-banner {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
 
 /* Submit button */
 .join-form button {
