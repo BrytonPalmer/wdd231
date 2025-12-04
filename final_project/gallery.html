@@ -31,7 +31,7 @@
         </div>
             <button id="hamburger" aria-label="Toggle navigation">
                 <span id="hamburger-icon">☰</span>
-            </button>/button>
+            </button>
         <nav class="nav_menu_items">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -45,10 +45,42 @@
 
     <main>
        <section class="clean_sweep_gallery">
-        <h2>Our Work in Action</h2>
+        <h1>Our Work in Action</h1>
         <div class="gallery_grid">
         </div>
         </section>
+        <form action="contact_confirmation.html" method="POST">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or would like to learn more about our services, please fill out the form below:</p>
+            <section class="join-form">
+                <form method="get" action="contact_confirmation.html">
+                    <!-- First Name -->
+                    <label>
+                        First Name:
+                        <input type="text" name="firstName" title="Applicant First Name" autocomplete="given-name" required>
+                    </label>
+                    <!-- Last Name -->
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" title="Applicant Last Name" autocomplete="family-name" required>
+                </label>
+                <!-- Email -->
+                <label>
+                    Email:
+                    <input type="email" name="email" title="Email Address" autocomplete="email" required 
+                    placeholder="example@domain.com">
+                </label>
+                <!-- Mobile Phone -->
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="mobile" title="Mobile Phone Number" autocomplete="tel" required>
+                </label>
+                <!-- Submit Button -->
+                <button type="submit">Talk to your Cleaning Falmily</button>
+            </form>
+            </section>
+        </form>
+
     </main>
     
     <footer>
