@@ -628,3 +628,15 @@ button:hover {
 .join-form button:hover {
   background: #005fa3;
 }
+
+form h2 {
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--accent-color1)
+}
+
+form p {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-color);
+}
