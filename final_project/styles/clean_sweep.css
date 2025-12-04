@@ -364,6 +364,9 @@ main h1 {
 
 h2 {
   margin-top: 0;
+  color: var(--accent-color1);
+  text-decoration: underline;
+  text-align: center;
 }
 
 ul {
@@ -386,8 +389,8 @@ input, select, button {
 }
 
 button {
-  background: var(--background-color);
-  color: white;
+  background: var(--accent-color2);
+  color: var(--text-color);
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -404,7 +407,7 @@ button:hover {
 }
 
 .calculator {
-  background-color: var(--accent-color1);
+  background-color: var(--background-color);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -412,7 +415,7 @@ button:hover {
   margin: 2rem auto;
 }
 .pricing {
-  background-color: var(--accent-color1);
+  background-color: var(--background-color);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -422,6 +425,7 @@ button:hover {
 #pricing_list ul li {
   margin-bottom: 1.5rem;
 }
+
 
 #services_main {
   display: flex;
@@ -433,6 +437,40 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   max-width: 800px;
   margin: 2rem auto;
+}
+#services_main h1 {
+  color: var(--accent-color1);
+  margin-bottom: 1rem;
+}
+#services_main p {
+  color: var(--accent-color1);
+  font-size: 1.2rem;
+}
+
+
+/* experiment */
+.services-columns {
+  display: flex;
+  gap: 2rem;              /* space between columns */
+  justify-content: center; /* center them horizontally */
+  align-items: flex-start; /* align tops */
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.pricing, .calculator {
+  flex: 1;                /* each takes equal width */
+  display: flex;
+  flex-direction: column; /* stack content inside */
+}
+.calculator form {
+  flex: 1;                /* take available vertical space */
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator button {
+  margin-top: auto;       /* pushes button to bottom */
 }
 
 /* blog page */
