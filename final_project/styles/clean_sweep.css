@@ -1,7 +1,7 @@
 :root {
     --background-color: #85b3d3;
     --text-color: #0d1321;
-    --accent-color1: #ffffff;
+    --accent-color1: #f4f6f8;
     --accent-color2: #b8a89b;
     --link-color: #593e28;
     --visited-link: #595756;
@@ -42,8 +42,8 @@ header {
 .nav_menu_items a {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 500;
-  font-size: 1.5em;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 .nav_menu_items a:hover {
