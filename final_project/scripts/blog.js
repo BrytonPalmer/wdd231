@@ -1,40 +1,53 @@
 // blog.js
+
 export function initBlog() {
   const blogForm = document.getElementById('blogForm');
   const postsContainer = document.getElementById('postsContainer');
   const savedPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
-  // Render saved posts
-  savedPosts.forEach(post => {
-    postsContainer.insertAdjacentHTML('afterbegin', createPostHTML(post));
-  });
+  // Render saved posts if container exists
+  if (postsContainer && Array.isArray(savedPosts)) {
+    savedPosts.forEach(post => {
+      postsContainer.insertAdjacentHTML('afterbegin', createPostHTML(post));
+    });
+  }
 
   // Handle new post submission
-  blogForm?.addEventListener('submit', function (e) {
-    e.preventDefault();
+  if (blogForm && postsContainer) {
+    blogForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    const author = document.getElementById('author').value.trim();
-    const title = document.getElementById('title').value.trim();
-    const content = document.getElementById('content').value.trim();
+      const author = document.getElementById('author').value.trim();
+      const title = document.getElementById('title').value.trim();
+      const content = document.getElementById('content').value.trim();
 
-    if (!author || !title || !content) return;
+      if (!author || !title || !content) return;
 
-    const newPost = { author, title, content };
-    postsContainer.insertAdjacentHTML('afterbegin', createPostHTML(newPost));
+      const newPost = {
+        author,
+        title,
+        content,
+        date: new Date().toISOString()
+      };
 
-    savedPosts.push(newPost);
-    localStorage.setItem('blogPosts', JSON.stringify(savedPosts));
+      postsContainer.insertAdjacentHTML('afterbegin', createPostHTML(newPost));
 
-    blogForm.reset();
-  });
+      savedPosts.push(newPost);
+      localStorage.setItem('blogPosts', JSON.stringify(savedPosts));
+
+      blogForm.reset();
+    });
+  }
 }
 
-function createPostHTML({ author, title, content }) {
+// Helper function to build post HTML
+function createPostHTML({ author, title, content, date }) {
+  const formattedDate = date ? new Date(date).toLocaleDateString() : '';
   return `
-    <div class="post">
+    <article class="post">
       <h4>${title}</h4>
-      <p><em>Posted by ${author}</em></p>
+      <p><em>Posted by ${author}${formattedDate ? ` on ${formattedDate}` : ''}</em></p>
       <p>${content}</p>
-    </div>
+    </article>
   `;
 }
