@@ -132,7 +132,10 @@
     <script defer src="scripts/clean_sweep.js"></script>
     <script defer src="scripts/navigation.js"></script>
     <script defer src="scripts/date.js"></script>
-    <script defer src="scripts/blog.js"></script>
+    <script type="module">
+        import { initBlog } from './scripts/blog.js';
+        initBlog();
+    </script>
 
 </body>
 </html>
