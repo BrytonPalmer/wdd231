@@ -125,13 +125,25 @@ if (pricingList) {
   }
 
   // Blog Logic with localStorage
+  function createPostHTML(post) {
+  return `
+    <article class="blog-post">
+      <h4>${post.title}</h4>
+      <p><strong>By:</strong> ${post.author}</p>
+      <p>${post.content}</p>
+    </article>
+  `;
+}
+
   const blogForm = document.getElementById('blogForm');
   const postsContainer = document.getElementById('postsContainer');
   const savedPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
-  savedPosts.forEach(post => {
-    postsContainer.insertAdjacentHTML('afterbegin', createPostHTML(post));
+  if (Array.isArray(savedPosts) && postsContainer && typeof createPostHTML === 'function') {
+    savedPosts.forEach(post => {
+      postsContainer.insertAdjacentHTML('afterbegin', createPostHTML(post));
   });
+}
 
   blogForm.addEventListener('submit', function (e) {
     e.preventDefault();
