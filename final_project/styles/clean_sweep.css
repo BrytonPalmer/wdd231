@@ -68,6 +68,9 @@ main {
     padding: 0rem;
     border-radius: 5px;
 }
+h1 {
+    color: var(--text-color);
+}
 
 .hero_section {
   position: relative;
@@ -113,7 +116,9 @@ main {
   color: white;
 }
 
-
+section.intro h1 {
+  color: var(--text-color);
+}
 
 #get_started_btn {
   display: inline-block;
@@ -274,7 +279,7 @@ main h1 {
   text-align: center;
   font-size: 2.5rem;
   margin: 2rem 0;
-  color: var(--background-color);
+  color: var(--text-color);
 }
 .about_us_content {
   display: flex;
@@ -364,7 +369,7 @@ main h1 {
 
 h2 {
   margin-top: 0;
-  color: var(--accent-color1);
+  color: var(--text-color);
   text-decoration: underline;
   text-align: center;
 }
@@ -439,11 +444,11 @@ button:hover {
   margin: 2rem auto;
 }
 #services_main h1 {
-  color: var(--accent-color1);
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 #services_main p {
-  color: var(--accent-color1);
+  color: var(--text-color);
   font-size: 1.2rem;
 }
 
@@ -515,7 +520,7 @@ button:hover {
 
 .blog-form button {
   background: var(--background-color);
-  color: white;
+  color: var(--text-color);
   border: none;
   padding: 0.75rem;
   font-size: 1rem;
@@ -615,13 +620,13 @@ button:hover {
 /* Heading and description */
 .join-form h2 {
   text-align: center;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
 .join-form p {
   text-align: center;
-  color: #666;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
 }
 
@@ -651,15 +656,15 @@ button:hover {
 
 .contact-banner {
   background-color: var(--background-color);
-  color: var(--accent-color1)
+  color: var(--text-color)
 }
 .contact-banner h1 {
   text-align: center;
-  color: var(--accent-color1)
+  color: var(--text-color)
 }
 .contact-banner p {
   text-align: center;
-  color: var(--accent-color1);
+  color: var(--text-color);
   font-size: 1.2rem;
 }
 div.contact-banner {
@@ -674,7 +679,7 @@ div.contact-banner {
   width: 100%;
   padding: 0.9rem;
   background: var(--background-color);
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
@@ -686,15 +691,26 @@ div.contact-banner {
 .join-form button:hover {
   background: #005fa3;
 }
+.join-form button {
+  color: var(--text-color);
+}
 
 form h2 {
   text-align: center;
   background-color: var(--background-color);
-  color: var(--accent-color1)
+  color: var(--text-color);
 }
 
 form p {
   text-align: center;
   font-size: 1rem;
+  color: var(--text-color);
+}
+
+div.about_us_text h2 {
+  color: var(--text-color);
+}
+
+section.testimonials h2 {
   color: var(--text-color);
 }
