@@ -86,14 +86,7 @@
   }
 }
 /* Base styles */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: var(--text-color);
-  cursor: pointer;
-}
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
@@ -118,7 +111,17 @@
     display: block;
   }
 
-  .hamburger {
-    display: block;
+
+}
+/* ham menu */
+@media (min-width: 769px) {
+  #mobile-nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #hamburger {
+    display: none !important;
   }
 }

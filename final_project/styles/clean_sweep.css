@@ -721,17 +721,8 @@ div.review {
   transition: transform 0.3s ease;
 } */
 
-@media (min-width: 769px) {
-  #mobile-nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-around;
-  }
 
-  #hamburger {
-    display: none !important;
-  }
-}
+
 /* chamber ham menu */
 #mobile-nav.hidden {
   display: none;
@@ -751,4 +742,19 @@ div.review {
 
 #hamburger-icon {
   transition: transform 0.3s ease;
+}
+
+nav#mobile-nav {
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+button#hamburger {
+  z-index: 1100;
+  color: var(--text-color)
 }
