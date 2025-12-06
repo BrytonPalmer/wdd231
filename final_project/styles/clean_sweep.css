@@ -539,29 +539,7 @@ button:hover {
   margin-bottom: 1rem;
   border-radius: 4px;
 }
-/* hamburger button */
-#hamburger {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
 
-#hamburger-icon {
-  transition: transform 0.3s ease;
-}
-
-@media (min-width: 769px) {
-  #mobile-nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  #hamburger {
-    display: none !important;
-  }
-}
 
 /* join form */
 .join-form {
@@ -729,4 +707,48 @@ div.review {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 4px;
+}
+
+/* hamburger button */
+/* #hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  transition: transform 0.3s ease;
+} */
+
+@media (min-width: 769px) {
+  #mobile-nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #hamburger {
+    display: none !important;
+  }
+}
+/* chamber ham menu */
+#mobile-nav.hidden {
+  display: none;
+}
+
+#mobile-nav.show {
+  display: block;
+}
+
+
+#hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  transition: transform 0.3s ease;
 }
